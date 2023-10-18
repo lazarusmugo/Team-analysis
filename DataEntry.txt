@@ -1,0 +1,50 @@
+Step 1
+Start
+display a welcome message
+print "Welcome to the FIFA WWC Data Entry Program"
+
+Step 2
+Ask the user for the number of teams they want to enter data for
+input numberOfTeams
+
+Step 3
+Create an empty array to store team details
+Create teams as an array of Team objects with a size of numberOfTeams
+teamCount = 0
+
+Step 4
+Start a loop to enter data for each team
+While teamCount < numberOfTeams:
+      display a message for the current team
+    print "Enter the data for Team " + (teamCount + 1) + ":"
+    
+      Ask for and read team data from the user
+    input teamName
+    input teamCode
+    input goalsScored
+    input goalsScoredAgainst
+    input group
+    
+      Create a Team object and store it in the teams array
+    teams[teamCount] = Create a new Team with the provided data
+    
+      Increment the teamCount
+    Increment teamCount by 1
+
+Step 5
+display the entered team data
+print "The current data looks like this:"
+For i = 0 to teamCount - 1:
+    print teams[i]
+
+Step 6
+Ask the user for a CSV file name and save the data to a CSV file
+input fileName
+Write data from teams array to a CSV file with the provided fileName
+
+Step 7
+display a closing message
+print "Thank you and have a great day!"
+
+Step 8
+End

@@ -1,0 +1,68 @@
+Step 1
+Start
+Welcome message
+print "Welcome to the FIFA WWC Analysis Program"
+
+Step 2
+Get user input for the CSV file
+Repeat until a valid file is entered:
+    print "Please enter the file name (without extension .csv): "
+    Read user input as 'fileName'
+    Set 'filePath' to 'fileName' + ".csv"
+    if 'filePath' does not exist:
+        print "File not found. Please enter a valid file name."
+
+Step 3
+Inform that the file is found
+print "File found."
+
+Step 4
+Read data from the CSV file and store it in an array
+Initialize an empty list 'dataList'
+Try:
+    Open 'filePath' as 'br' for reading
+    Read the first line of 'br' as 'headerLine'
+    if 'headerLine' is empty:
+        print "The CSV file is empty. Please check the file."
+        Return an empty array
+
+    Repeat until there are no more lines in 'br':
+        Read a line from 'br' as 'line'
+        Split 'line' by ',' into 'data'
+        if the length of 'data' is not 5:
+            print "Invalid formatting in line: " + 'line'
+            Continue to the next iteration
+
+        Extract values from 'data'
+        Create a 'TeamData' object from extracted values
+        Add the 'TeamData' object to 'dataList'
+
+    Close 'br'
+Catch IOException:
+    print the error message
+
+Step 5
+Convert 'dataList' to an array of 'TeamData'
+Set 'dataArray' to 'dataList' as an array
+
+Step 6
+display options for data analysis
+Repeat until the user chooses to exit:
+    print "Data Analysis System:"
+    print "1. Overall Analysis"
+    print "2. Group Analysis"
+    print "3. Exit"
+    Read user input as 'analysisType'
+
+    if 'analysisType' is "1":
+        Perform overall analysis on 'dataArray'
+    Else, if 'analysisType' is "2":
+        Perform group analysis on 'dataArray'
+    Else, if 'analysisType' is "3":
+        print "Exiting the program. Goodbye!"
+        Exit the loop
+    Else:
+        print "Invalid input. Please choose the correct option."
+
+Step 7
+End
